@@ -1,11 +1,11 @@
 <?php
 class Car{
 
-    public $id = integer;
-    public $license = string;
-    public $document = string;
-    public $driver = string;
-    public $passengers = string;
+    public $id;
+    public $license;
+    public $document;
+    public $driver;
+    public $passengers;
 
     public function __construct(license, driver){
 
@@ -13,4 +13,8 @@ class Car{
         $this->driver = $driver;
 
     }
+
+    public function PrintDataCar(){
+        echo "license: $this->license, conductor: {$this->driver->name}, document: {$this->driver->document}";
+      }
 }
