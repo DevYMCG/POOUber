@@ -11,6 +11,9 @@ class Account{
 
         $this->name = $name;
         $this->document = $document;
-
     }
+
+    public function PrintDataAccount(){
+        echo "name: $this->name, document: {$this->document}";
+      }
 }
