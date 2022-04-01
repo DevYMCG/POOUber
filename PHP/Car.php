@@ -1,4 +1,5 @@
 <?php
+
 class Car{
 
     public $id;
@@ -7,7 +8,7 @@ class Car{
     public $driver;
     public $passengers;
 
-    public function __construct(license, driver){
+    public function __construct($license, $driver){
 
         $this->license = $license;
         $this->driver = $driver;
