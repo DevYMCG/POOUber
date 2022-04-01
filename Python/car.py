@@ -1,7 +1,7 @@
 from ast import Str
 
 
-class Card:
+class Car:
     id              = int
     license         = Str
     driver          = Str
