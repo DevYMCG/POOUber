@@ -13,4 +13,19 @@ class UberVan extends Car{
         this.typeCardAccepted = typeCardAccepted;
         this.seatsMaterial = seatsMaterial;
     }
+
+    public UberVan(String license, Account driver){
+        super(license, driver);
+    }
+
+    @Override
+    public void setPassenger(Integer passegenger) {
+        if(passegenger == 6){
+            this.passegenger = passegenger;
+        }else{
+            System.out.println("Necesitas asignar 6 pasajeros");
+        }
+    }
+
+    
 }
