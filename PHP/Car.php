@@ -6,7 +6,7 @@ class Car{
     public $license;
     public $document;
     public $driver;
-    public $passengers;
+    protected $passenger;
 
     public function __construct($license, $driver){
 
@@ -16,6 +16,27 @@ class Car{
     }
 
     public function PrintDataCar(){
-        echo "license: $this->license, conductor: {$this->driver->name}, document: {$this->driver->document}";
-      }
+        if($this->passenger!=null)
+            echo "
+                license: $this->license, 
+                conductor: {$this->driver->name},  
+                pasajeros: {$this->passenger}
+                
+                ";
+    }
+
+    public function getPassenger(){
+        return $this->passenger;
+    }
+    
+    public function setPassenger($passenger){
+
+        if($passenger == 4){
+            $this->passenger = $passenger;
+        }else{
+            echo "Necesitas asignar 4 pasajeros";
+        }
+    }
+
+
 }
